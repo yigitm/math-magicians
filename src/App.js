@@ -1,9 +1,9 @@
 import React from 'react';
-import UI from './components/Calculator';
+import Calculator from './components/Calculator';
 
 class App extends React.Component {
   render() {
-    return UI;
+    return Calculator;
   }
 }
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UI = (
+const Calculator = (
   <div className="container">
     <div className="result">0</div>
     <div className="numerics">
@@ -49,4 +49,4 @@ const UI = (
   </div>
 );
 
-export default UI;
+export default Calculator;
