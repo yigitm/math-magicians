@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Calculator from './components/Calculator';
+import App from './App';
 
-const elm = <h1>Text in JS</h1>;
-ReactDOM.render(elm, document.getElementById('root'));
-ReactDOM.render(<Calculator />, document.getElementById('app'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector('body'),
+);
