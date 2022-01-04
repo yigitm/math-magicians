@@ -3,7 +3,7 @@ import UI from './components/Calculator';
 
 class App extends React.Component {
   render() {
-    return <UI />;
+    return UI;
   }
 }
 export default App;
