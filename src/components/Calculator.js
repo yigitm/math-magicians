@@ -1,4 +1,6 @@
 import React from 'react';
+import calculate from '../logic/calculate.js';
+import operate from '../logic/operate.js';
 
 const Calculator = (
   <div className="container">
