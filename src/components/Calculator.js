@@ -1,54 +1,104 @@
 import React from 'react';
-import calculate from '../logic/calculate.js';
-import operate from '../logic/operate.js';
+import calculate from '../logic/calculate';
 
-const Calculator = (
-  <div className="container">
-    <div className="result">0</div>
-    <div className="numerics">
-      <div className="row">
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">%</button>
-        <button className="orange" type="button">
-          /
-        </button>
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      obj: {},
+    };
+  }
+
+  getData = (e) => {
+    const buttonName = e.target.textContent;
+    const { obj } = this.state;
+    this.setState({
+      obj: calculate(obj, buttonName),
+    });
+  };
+
+  render() {
+    const { obj } = this.state;
+
+    return (
+      <div className="container">
+        <div className="result">
+          {obj.next}
+          {obj.operation}
+          {obj.total}
+        </div>
+        <div className="numerics">
+          <div className="row">
+            <button type="button" onClick={this.getData}>
+              AC
+            </button>
+            <button type="button" onClick={this.getData}>
+              +/-
+            </button>
+            <button type="button" onClick={this.getData}>
+              %
+            </button>
+            <button className="orange" type="button" onClick={this.getData}>
+              ÷
+            </button>
+          </div>
+          <div className="row">
+            <button type="button" onClick={this.getData}>
+              7
+            </button>
+            <button type="button" onClick={this.getData}>
+              8
+            </button>
+            <button type="button" onClick={this.getData}>
+              9
+            </button>
+            <button className="orange" type="button" onClick={this.getData}>
+              x
+            </button>
+          </div>
+          <div className="row">
+            <button type="button" onClick={this.getData}>
+              4
+            </button>
+            <button type="button" onClick={this.getData}>
+              5
+            </button>
+            <button type="button" onClick={this.getData}>
+              6
+            </button>
+            <button className="orange" type="button" onClick={this.getData}>
+              -
+            </button>
+          </div>
+          <div className="row">
+            <button type="button" onClick={this.getData}>
+              1
+            </button>
+            <button type="button" onClick={this.getData}>
+              2
+            </button>
+            <button type="button" onClick={this.getData}>
+              3
+            </button>
+            <button className="orange" type="button" onClick={this.getData}>
+              +
+            </button>
+          </div>
+          <div className="row">
+            <button className="span-col" type="button" onClick={this.getData}>
+              0
+            </button>
+            <button type="button" onClick={this.getData}>
+              .
+            </button>
+            <button className="orange" type="button" onClick={this.getData}>
+              =
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="row">
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button className="orange" type="button">
-          *
-        </button>
-      </div>
-      <div className="row">
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button className="orange" type="button">
-          -
-        </button>
-      </div>
-      <div className="row">
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button className="orange" type="button">
-          +
-        </button>
-      </div>
-      <div className="row">
-        <button className="span-col" type="button">
-          0
-        </button>
-        <button type="button">.</button>
-        <button className="orange" type="button">
-          =
-        </button>
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default Calculator;
