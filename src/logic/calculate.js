@@ -127,3 +127,7 @@ export default function calculate(obj, buttonName) {
     operation: buttonName,
   };
 }
+
+calculate.defaultProps = {
+  obj: 0,
+};

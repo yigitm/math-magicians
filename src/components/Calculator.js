@@ -5,7 +5,9 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      obj: {},
+      obj: {
+        initial: 0,
+      },
     };
   }
 
@@ -19,10 +21,10 @@ class Calculator extends React.Component {
 
   render() {
     const { obj } = this.state;
-
     return (
       <div className="container">
         <div className="result">
+          {obj.initial}
           {obj.next}
           {obj.operation}
           {obj.total}
