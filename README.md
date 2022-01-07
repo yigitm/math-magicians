@@ -2,17 +2,19 @@
 
 # Math Magicians
 
-> About
+## About
+
 > It is a Single Page App (SPA) that allows users to make simple calculations & read a random math-related quote.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app.gif)
 
-Additional description about the project and its features.
+This project consist of learning; class and functional component syntax with testing practices in React.
 
 ## Built With
 
 - Html, CSS, Javascript
 - React
+- Jest
 
 ## Live Demo
 
@@ -20,17 +22,39 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**Will be updated soon**
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
+
+If you are not familiar to use terminal, please check this [article](https://www.theodinproject.com/courses/web-development-101/lessons/command-line-basics-web-development-101)
 
 ### Setup
 
+Open your terminal and run the following commands on your terminal.
+
+Make sure 'Javascript' is not blocked in your browser.
+
 ### Install
 
+To get a local copy of the repository, run the following commands on your terminal.
+
+```
+cd <your_desktop>
+```
+
+```
+git clone git@github.com:yigitm/math-magicians.git
+```
+
+```
+cd math-magicians
+```
+
 ### Usage
+
+To install the necessary Javascript packages to your project, run below commands.
+
+```
+npm install
+```
 
 ### Run tests
 
@@ -40,9 +64,10 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Yigit Mersin**
 
-- GitHub: [@githubhandle](https://github.com/yigitm)
-- Twitter: [@twitterhandle](https://twitter.com/ygtmrsn)
+- GitHub: [@githubhandle](https://github.com/ygtmrsn)
 - LinkedIn: [LinkedIn](linkedin.com/in/yigitmersin)
+  yigitm)
+- Twitter: [@twitterhandle](https://twitter.com/
 
 ## 🤝 Contributing
 
@@ -56,9 +81,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Free Code Camp
+- Open Source
 
 ## 📝 License
 
