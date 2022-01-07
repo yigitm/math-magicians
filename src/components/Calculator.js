@@ -43,6 +43,7 @@ function Calculator() {
   const showAC = (
     <button
       type="button"
+      key="ac"
       onClick={(e) => {
         getData(e);
         allClear(e);
@@ -54,7 +55,7 @@ function Calculator() {
 
   const showRest = buttons.map((btn) => {
     const allBtns = (
-      <button type="button" onClick={(e) => getData(e)}>
+      <button type="button" key={btn} onClick={(e) => getData(e)}>
         {btn}
       </button>
     );

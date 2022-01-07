@@ -22,8 +22,14 @@ body {
   background-color: rgb(102, 99, 99);
 }
 
-.buttons {
-  grid-template-columns: repeat(4, 1fr);
+.buttons button,
+.result {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.buttons button {
+  padding: 18%;
 }
 
 .buttons button:nth-child(17) {
@@ -36,12 +42,6 @@ body {
   background-color: rgb(255, 136, 0);
 }
 
-.buttons button {
-  padding: 18%;
-}
-
-.buttons button,
-.result {
-  font-size: xx-large;
-  font-weight: bolder;
+.buttons {
+  grid-template-columns: repeat(4, 1fr);
 }
