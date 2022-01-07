@@ -19,6 +19,49 @@ function Calculator() {
     setInitial('0');
   }
 
+  const buttons = [
+    '+/-',
+    '%',
+    '÷',
+    '7',
+    '8',
+    '9',
+    'x',
+    '4',
+    '5',
+    '6',
+    '-',
+    '1',
+    '2',
+    '3',
+    '+',
+    '0',
+    '.',
+    '=',
+  ];
+
+  const showAC = (
+    <button
+      type="button"
+      onClick={(e) => {
+        getData(e);
+        allClear(e);
+      }}
+    >
+      AC
+    </button>
+  );
+
+  const showRest = buttons.map((btn) => {
+    const allBtns = (
+      <button type="button" onClick={(e) => getData(e)}>
+        {btn}
+      </button>
+    );
+
+    return allBtns;
+  });
+
   return (
     <div className="container">
       <div className="result">
@@ -28,78 +71,8 @@ function Calculator() {
         {obj.total}
       </div>
       <div className="buttons">
-        <button
-          type="button"
-          onClick={(e) => {
-            getData(e);
-            allClear(e);
-          }}
-        >
-          AC
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          +/-
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          %
-        </button>
-        <button className="orange" type="button" onClick={(e) => getData(e)}>
-          ÷
-        </button>
-
-        <button
-          type="button"
-          onClick={(e) => {
-            getData(e);
-          }}
-        >
-          7
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          8
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          9
-        </button>
-        <button className="orange" type="button" onClick={(e) => getData(e)}>
-          x
-        </button>
-
-        <button type="button" onClick={(e) => getData(e)}>
-          4
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          5
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          6
-        </button>
-        <button className="orange" type="button" onClick={(e) => getData(e)}>
-          -
-        </button>
-
-        <button type="button" onClick={(e) => getData(e)}>
-          1
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          2
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          3
-        </button>
-        <button className="orange" type="button" onClick={(e) => getData(e)}>
-          +
-        </button>
-
-        <button className="span-col" type="button" onClick={(e) => getData(e)}>
-          0
-        </button>
-        <button type="button" onClick={(e) => getData(e)}>
-          .
-        </button>
-        <button className="orange" type="button" onClick={(e) => getData(e)}>
-          =
-        </button>
+        {showAC}
+        {showRest}
       </div>
     </div>
   );
