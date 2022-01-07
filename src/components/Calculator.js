@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-function Calculator() {
+const Calculator = () => {
   const [obj, setObj] = useState({
     next: null,
     operation: null,
@@ -10,14 +10,14 @@ function Calculator() {
 
   const [initial, setInitial] = useState(0);
 
-  function getData(e) {
+  const getData = (e) => {
     setObj(calculate(obj, e.target.textContent));
     setInitial('');
-  }
+  };
 
-  function allClear() {
+  const allClear = () => {
     setInitial('0');
-  }
+  };
 
   const buttons = [
     '+/-',
@@ -77,6 +77,6 @@ function Calculator() {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
