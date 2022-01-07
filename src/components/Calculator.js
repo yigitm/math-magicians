@@ -15,14 +15,15 @@ function Calculator() {
     setInitial('');
   }
 
-  function allClear() {
+  function allClear(e) {
     setInitial('0');
+    e.target.padding = 0;
   }
 
   return (
     <div className="container">
       <div className="result">
-        <p>{initial}</p>
+        {initial}
         {obj.next}
         {obj.operation}
         {obj.total}
