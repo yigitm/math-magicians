@@ -67,9 +67,9 @@ const Calculator = () => {
     <div className="container">
       <div className="result">
         {initial}
-        {obj.next}
-        {obj.operation}
         {obj.total}
+        {obj.operation}
+        {obj.next}
       </div>
       <div className="buttons">
         {showAC}
