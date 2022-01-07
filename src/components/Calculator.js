@@ -2,28 +2,40 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
 function Calculator() {
-  let [obj, setObj] = useState({
+  const [obj, setObj] = useState({
     next: null,
     operation: null,
     total: null,
-    initial: 0,
   });
 
+  const [initial, setInitial] = useState(0);
+
   function getData(e) {
-    setObj((obj = calculate(obj, e.target.textContent)));
+    setObj(calculate(obj, e.target.textContent));
+    setInitial('');
+  }
+
+  function allClear() {
+    setInitial('0');
   }
 
   return (
     <div className="container">
       <div className="result">
-        {obj.initial}
+        <p>{initial}</p>
         {obj.next}
         {obj.operation}
         {obj.total}
       </div>
       <div className="numerics">
         <div className="row">
-          <button type="button" onClick={(e) => getData(e)}>
+          <button
+            type="button"
+            onClick={(e) => {
+              getData(e);
+              allClear(e);
+            }}
+          >
             AC
           </button>
           <button type="button" onClick={(e) => getData(e)}>
@@ -37,7 +49,12 @@ function Calculator() {
           </button>
         </div>
         <div className="row">
-          <button type="button" onClick={(e) => getData(e)}>
+          <button
+            type="button"
+            onClick={(e) => {
+              getData(e);
+            }}
+          >
             7
           </button>
           <button type="button" onClick={(e) => getData(e)}>

@@ -64,7 +64,6 @@ export default function calculate(obj, buttonName) {
         operation: null,
       };
     }
-    // '=' with no operation, nothing to do
     return {};
   }
 
