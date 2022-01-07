@@ -10,7 +10,6 @@ export default function calculate(obj, buttonName) {
       total: null,
       next: null,
       operation: null,
-      initial: 0,
     };
   }
 
@@ -63,7 +62,6 @@ export default function calculate(obj, buttonName) {
         total: operate(obj.total, obj.next, obj.operation),
         next: null,
         operation: null,
-        initial: '',
       };
     }
     // '=' with no operation, nothing to do
@@ -106,7 +104,3 @@ export default function calculate(obj, buttonName) {
     operation: buttonName,
   };
 }
-
-calculate.defaultProps = {
-  obj: 0,
-};
