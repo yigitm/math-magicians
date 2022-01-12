@@ -65,15 +65,18 @@ const Calculator = () => {
 
   return (
     <div className="container">
-      <div className="result">
-        {initial}
-        {obj.total}
-        {obj.operation}
-        {obj.next}
-      </div>
-      <div className="buttons">
-        {showAC}
-        {showRest}
+      <h2>Let's do some math!</h2>
+      <div className="calculator">
+        <div className="result">
+          {initial}
+          {obj.total}
+          {obj.operation}
+          {obj.next}
+        </div>
+        <div className="buttons">
+          {showAC}
+          {showRest}
+        </div>
       </div>
     </div>
   );

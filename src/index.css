@@ -8,14 +8,57 @@ body {
 .result,
 .buttons,
 .home,
+.quote,
 footer {
   display: grid;
+  grid-template-columns: 1fr;
 }
 
 .container {
-  margin: 5% 30%;
-  padding: 0;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container > h2 {
+  padding-left: 1rem;
+  font-size: 5vh;
+}
+
+.calculator {
+  padding-right: 2rem;
+  width: 30%;
+}
+
+nav {
+  display: flex;
+  padding-left: 1em;
+  justify-content: space-between;
+}
+
+nav > h1 {
+  font-size: 7vh;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  font-size: 3vh;
+}
+
+ul li {
+  margin-right: 1em;
+  list-style: none;
+}
+
+li:nth-child(1),
+li:nth-child(2) {
+  padding-right: 15px;
+  border-right: 3px solid black;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 .result {
@@ -49,42 +92,8 @@ footer {
   grid-template-columns: repeat(4, 1fr);
 }
 
-nav {
-  display: flex;
-  padding-right: 1em;
-  padding-left: 1em;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav > h1 {
-  font-size: 8vh;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-  font-size: 3vh;
-}
-
-ul li {
-  margin-right: 1em;
-  padding-right: 1em;
-  list-style: none;
-}
-
-li > a {
-  text-decoration: none;
-  color: black;
-}
-
-li:nth-child(1),
-li:nth-child(2) {
-  border-right: 5px solid black;
-}
-
 .home {
-  padding: 2em;
+  padding: 3em;
 }
 
 .home > h2 {
@@ -95,12 +104,22 @@ li:nth-child(2) {
   font-size: 3vh;
 }
 
+.quote {
+  margin: 10% auto;
+}
+
+.quote > h1 {
+  padding: 1em;
+  text-align: left;
+  font-size: 6vh;
+}
+
 footer {
-  text-align: center;
-  padding: 0;
+  font-size: 2vh;
 }
 
 footer > h3 {
-  font-size: 3vh;
-  color: blueviolet;
+  position: fixed;
+  bottom: 0;
+  left: 45%;
 }
