@@ -2,11 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Error = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <h1>Page not found!</h1>
       <button
+        type="button"
         onClick={() => {
           navigate('/');
         }}

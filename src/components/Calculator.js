@@ -65,7 +65,7 @@ const Calculator = () => {
 
   return (
     <div className="container">
-      <h2>Let's do some math!</h2>
+      <h2>Let&apos;s do some math!</h2>
       <div className="calculator">
         <div className="result">
           {initial}
