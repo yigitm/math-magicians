@@ -64,10 +64,9 @@ npm install
 
 👤 **Yigit Mersin**
 
-- GitHub: [@githubhandle](https://github.com/ygtmrsn)
-- LinkedIn: [LinkedIn](linkedin.com/in/yigitmersin)
-  yigitm)
-- Twitter: [@twitterhandle](https://twitter.com/
+- GitHub: [@github](https://github.com/ygtmrsn)
+- LinkedIn: [@linkedIn](linkedin.com/in/yigitmersin)
+- Twitter: [@twitter](https://twitter.com/ygtmrsn)
 
 ## 🤝 Contributing
 

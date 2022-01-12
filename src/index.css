@@ -6,13 +6,59 @@ body {
 
 .container,
 .result,
-.buttons {
+.buttons,
+.home,
+.quote,
+footer {
   display: grid;
+  grid-template-columns: 1fr;
 }
 
 .container {
-  margin: 5% 30%;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container > h2 {
+  padding-left: 1rem;
+  font-size: 5vh;
+}
+
+.calculator {
+  padding-right: 2rem;
+  width: 30%;
+}
+
+nav {
+  display: flex;
+  padding-left: 1em;
+  justify-content: space-between;
+}
+
+nav > h1 {
+  font-size: 7vh;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  font-size: 3vh;
+}
+
+ul li {
+  margin-right: 1em;
+  list-style: none;
+}
+
+li:nth-child(1),
+li:nth-child(2) {
+  padding-right: 15px;
+  border-right: 3px solid black;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 .result {
@@ -44,4 +90,36 @@ body {
 
 .buttons {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.home {
+  padding: 3em;
+}
+
+.home > h2 {
+  font-size: 5vh;
+}
+
+.home > p {
+  font-size: 3vh;
+}
+
+.quote {
+  margin: 10% auto;
+}
+
+.quote > h1 {
+  padding: 1em;
+  text-align: left;
+  font-size: 6vh;
+}
+
+footer {
+  font-size: 2vh;
+}
+
+footer > h3 {
+  position: fixed;
+  bottom: 0;
+  left: 45%;
 }
