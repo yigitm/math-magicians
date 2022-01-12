@@ -6,12 +6,15 @@ body {
 
 .container,
 .result,
-.buttons {
+.buttons,
+.home,
+footer {
   display: grid;
 }
 
 .container {
   margin: 5% 30%;
+  padding: 0;
   grid-template-columns: 1fr;
 }
 
@@ -46,6 +49,58 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.h1 {
-  font-size: 15vw;
+nav {
+  display: flex;
+  padding-right: 1em;
+  padding-left: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > h1 {
+  font-size: 8vh;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  font-size: 3vh;
+}
+
+ul li {
+  margin-right: 1em;
+  padding-right: 1em;
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+}
+
+li:nth-child(1),
+li:nth-child(2) {
+  border-right: 5px solid black;
+}
+
+.home {
+  padding: 2em;
+}
+
+.home > h2 {
+  font-size: 5vh;
+}
+
+.home > p {
+  font-size: 3vh;
+}
+
+footer {
+  text-align: center;
+  padding: 0;
+}
+
+footer > h3 {
+  font-size: 3vh;
+  color: blueviolet;
 }
