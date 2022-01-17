@@ -5,6 +5,7 @@
 ## About
 
 > It is a Single Page App (SPA) that allows users to make simple calculations & read a random math-related quote.
+> Main purpose is to practice concepts such as state, props, life cycle methods, class and functional structures in React eco system.
 
 ![screenshot](./app.gif)
 
@@ -18,7 +19,7 @@ This project consist of learning; class and functional component syntax with tes
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://nifty-mclean-dbf20f.netlify.app/)
 
 ## Getting Started
 
@@ -58,7 +59,15 @@ npm install
 
 ### Run tests
 
+To run the unit tests, run the below command in your terminal.
+
+```
+npm test
+```
+
 ### Deployment
+
+For the deployment Netlify is used.
 
 ## Authors
 
@@ -83,6 +92,7 @@ Give a ⭐️ if you like this project!
 - Microverse
 - Free Code Camp
 - Open Source
+- Netlify
 
 ## 📝 License
 

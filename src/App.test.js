@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("checks the App's initial display", () => {
+  test('checks for home page header exist ', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Welcome to our page!/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 });
