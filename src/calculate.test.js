@@ -1,6 +1,4 @@
-import { render, screen } from '@testing-library/react';
 import calculate from './logic/calculate';
-import operate from './logic/operate';
 
 describe('checks isNumber function', () => {
   function isNumber(item) {
